@@ -1,0 +1,14 @@
+.main_body_area{
+    height: 400px;
+    margin: 20px;   
+}
+
+.item_img
+{
+    border: 2px grey solid;
+    background-color: black;
+}
+.owner_details
+{
+  margin: 30px;
+}

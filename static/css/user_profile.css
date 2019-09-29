@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Sep-2017, 19:15:19
+    Author     : Bharath
+*/
+
+.profile_header_texture
+{
+    width: 958px;
+    min-height: 224px;
+    margin: 0 auto;
+    background-image: url(../images/user_prof_background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile_photo
+{
+   padding: 10px;
+   margin: 5px;
+   width: 200px;
+   height: 200px;
+   float:left;
+}
+
+.profile_data
+{
+   padding:10px;
+   padding-top: 0px;
+   margin: 5px;
+   float: left;
+}
+.profile_data>p
+{
+   font-family: "Areial";
+   font-size: 30px;
+}
+.profile_level
+{
+    float:left;
+    margin-left: 300px;
+    margin-top: 20px;
+}

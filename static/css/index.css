@@ -1,0 +1,176 @@
+.top_display
+{
+    float: right;
+    margin-right: 60px;
+    padding-top: 80px;
+    border-right-width: 50px;
+    padding-right: 80px;
+    font-size: 40px;
+
+}
+
+.image_logo{
+    float: left;
+}
+
+.container_data
+{
+  margin-top: 0px;
+    margin-right: 0px;
+    padding-top: 20px;
+    max-height: 200px;
+    height: 200px;   
+}
+.container_data>p
+{
+    color: #9dc473;
+    font-size: 20px;
+    font-family:cursive ;
+      padding-left: 255px;
+}
+.container_data>h1
+{
+   color: white;
+    padding-left: 235px;
+    padding-top: 30px;
+}
+
+
+.container_body
+{
+    background: rgba(0, 0, 0, 0.4);
+    height: auto;
+}
+
+#footer
+{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    margin-top: 10px;
+        width: -webkit-fill-available;
+}
+
+.activity_bar
+{
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    white-space: nowrap;
+    margin-top: 3px;
+    padding-top: 4px;
+    height: 35px;
+
+  
+}
+.activity_bar>ul
+{
+    list-style: none;
+    padding: 5px;
+    margin:0;
+    
+}
+.activity_bar>ul>li
+{
+    float: left;
+    margin-left: 30px;
+    text-decoration:none;
+}
+.activity_bar>ul>li>a
+{
+      color:whitesmoke;
+    padding: 10px;
+}
+.activity_bar>ul>li>a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.activity_bar>ul>.active{
+    padding: 6px;
+    background-color:black;
+    opacity: 0.5;
+        border-radius: 5px;
+}
+
+
+
+.nav-tabs .nav-link.disabled{color:#868e96;background-color:transparent;border-color:transparent}.nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link.active{color:#495057;background-color:#fff;border-color:#ddd #ddd #fff}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}
+.tab-content>.tab-pane{display:none}
+.tab-content>.active{display:block}
+
+.item_description
+{
+    padding-top: 25px;
+    padding-left: 100px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.item_price
+{
+    float:right;
+    font-size: 20px;
+        padding-bottom: 30px;
+    padding-right: 80px;
+}
+
+.img1
+{
+    border: 2px solid;
+    margin-top: 5px;
+    background-color: black;
+    width: 600px;
+}
+.image
+{
+    float: left;
+    max-height: 100px;
+    border: 2px solid;
+    margin-right: 7px;
+    margin-left: 3px;
+    margin-top: 3px;
+    background-color:cadetblue;
+}
+.tab-content
+{
+    width: 700px;
+}
+
+.game_list
+{
+     float: right;
+    margin: 10px;
+    width: 328px;
+    background: rgba(0, 0, 0, 0.4);   
+}
+.game_info:hover
+{
+    background: black;
+}
+
+.game_info
+{
+    width: 270px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 24px;
+    background: #2b475e;
+}
+.game_details
+{
+    margin-top: 13px;
+    font-size: 16px;
+    margin-right: 0px;
+    padding-top: 10px;
+    padding-left: 43px;
+}
+.img2
+{
+      float: left;
+    width: 30px;
+    margin: 5px;
+    margin-right: 0px;
+    margin-left: 6px;  
+}
