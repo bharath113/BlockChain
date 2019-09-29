@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>receptionist</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+		<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="super_container" style="border:1px solid black;height:170px;">
+	<div class="home">
+		
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<h3><span style="color:green">EHR</span><span style="color:red">+</span></h3>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_nav">
+											<ul class="d-flex flex-row align-items-center justify-content-start">
+												<li><button class="papa" onclick="document.getElementById('id00').style.display='none';document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none';document.getElementById('id03').style.display='none';" style="width:auto;">Patient registration</button></li>
+												<li><button class="papa" onclick="document.getElementById('id00').style.display='none';document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none';document.getElementById('id03').style.display='none';" style="width:auto;">Doctor registration</button></li>
+												<li><button class="papa" onclick="document.getElementById('id00').style.display='none';document.getElementById('id02').style.display='none';document.getElementById('id01').style.display='none';document.getElementById('id03').style.display='block';" style="width:auto;">Lab Technician registration</button></li>
+                        <li><button class="papa" onclick="document.getElementById('id01').style.display='none';document.getElementById('id00').style.display='block';document.getElementById('id02').style.display='none';document.getElementById('id03').style.display='none';" style="width:auto;">Book Appointment</button></li>
+											</ul>
+										</div>
+										<div class="header_top_phone">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>contact number</span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li class="active"><a href="/receptionist">Home</a></li>
+													<li class="active"><a href="/logout">Logout</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>	
+	</div>
+</div>
+	
+
+		<div id="id00" class="modal">
+  <form class="modal-content animate" >
+    <div class="imgicontainer">
+      <span onclick="document.getElementById('id00').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/images/img_avatar2.png" alt="Avatar" class="avatari">
+    </div>
+<h2 style="color:black;">Book an Appointment</h2>
+<p style="color:black;">Fill in the form below</p>
+<hr noshade style="color:black;">
+    <div class="containers">
+      <label for="uname"><b>Patient Id</b></label><input type="number" id="Bpid" style="width:300px;height:40px;margin-left:66px;" placeholder="Enter Patient Id" name="uname" required>
+<br><br>
+	  
+    <!--  <label for="email"><b>Email</b></label><input type="email" id="Bpemail" style="width:300px;height:40px;margin-left:69px;" placeholder="Enter Email" name="email" required>
+<br><br>
+<label for="sex"><b>Sex</b></label>
+<select name="sex" id="Bpsex" style="margin-left:82px;">
+    <option value="none"></option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+		<hr noshade>
+<label for="contact"><b>Contact</b></label><input  id="Bpcontact" type="number" style="width:300px;height:40px;margin-left:53px;" name="contact" required>-->
+
+      <label for="uname"><b>Problem</b></label><input type="text" id="Bpprob" style="width:300px;height:40px;margin-left:53px;" placeholder="Enter Patient Problem" name="uname" required>
+<br>
+	<hr noshade>
+	
+<div class="container" style="width:600px;">
+   <br />
+  <!--<select name="department" style="height:50px;" id="department" class="form-control input-lg">
+    <option value="">Select department</option>
+   </select>
+   <br/>-->
+   <select name="state" id="doctor"  style="height:50px;" class="form-control input-lg">
+    <option value="">Select doctor</option>
+   </select>
+   <br />
+  </div>
+	   
+      <button class="asas" onclick="bookAppointment();" type="submit">Register</button>
+    </div>
+
+    <div class="containers" style="background-color:#f1f1f1">
+      <button type="button" onclick="refpop0()" class="cancelbtn">Cancel</button>
+     
+    </div>
+  </form>
+</div>
+	
+	
+<script>
+		var key;
+				window.onload = function () {
+						if (typeof web3 !== 'undefined') {
+								web3 = new Web3(web3.currentProvider);
+								key = web3.eth.accounts[0];
+						} else {
+								// set the provider you want from Web3.providers
+								web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+								key = web3.eth.accounts[0];
+						}
+						 GetPatientData();
+						 Doctors();
+		}
+		
+		var abi1 =[
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Mappings",
+				"outputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "department",
+						"type": "string"
+					},
+					{
+						"name": "Address",
+						"type": "string"
+					},
+					{
+						"name": "Id",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "key",
+						"type": "uint256"
+					}
+				],
+				"name": "RetriveDocotorDetails",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "department",
+						"type": "string"
+					},
+					{
+						"name": "Address",
+						"type": "string"
+					}
+				],
+				"name": "RegisterDoctor",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "GetDoctors",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		];
+				var contractaddress1 = '{{ contract_address[1] }}';//'0x5f1e5df4adc8f279ba313c941252b8ebc9ebb537';
+				var myAbi1 = web3.eth.contract(abi1);
+				var myfunction1 = myAbi1.at(contractaddress1);
+				
+				function RegDoctor() {
+					
+				 var p11 = document.getElementById('id01');
+		
+					p11.style.display = "none";
+					var p111 = document.getElementById('dname').value;
+					var p12 = document.getElementById('demail').value;
+					var p14 = document.getElementById('dadd').value;
+					var p15 = document.getElementById('dcity').value;
+					var p16 = document.getElementById('dstate').value;
+					var p17 = document.getElementById('dcontact').value;
+					var p18 = document.getElementById('dsex').value;
+					var p19 = document.getElementById('ddep').value;
+					var p112 = p14+"-"+p15+"-"+p16;
+				myfunction1.RegisterDoctor.sendTransaction(
+					p111, p12, p18, p17, p19, p112, function(error, result){
+	
+					 if(!error) { }
+					 else alert(error);
+					}
+				)
+				}
+		
+				function Doctors(){
+					myfunction1.GetDoctors.call(function (error, result) {
+						if (!error) { 
+		 
+							var table = document.getElementById('doctor');
+							var k="";
+							for(var i=0;i<result;i++)
+							{
+								myfunction1.RetriveDocotorDetails.call(i+1,function(errors,results){
+		
+									if(!errors){
+										k += '<option value="'+results[6]+'">'+results[0]+'</option>';
+									}
+									else
+									alert(errors);
+									table.innerHTML=k;
+								});
+							}
+						 }
+						 else
+						 alert(error);
+					}
+				);
+				}
+		
+				var abi = [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Mappings",
+				"outputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "birthday",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "maritalStatus",
+						"type": "bool"
+					},
+					{
+						"name": "Address",
+						"type": "string"
+					},
+					{
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "key",
+						"type": "uint256"
+					}
+				],
+				"name": "RetrivePatientDetails",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "birthday",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "maritalStatus",
+						"type": "bool"
+					},
+					{
+						"name": "Address",
+						"type": "string"
+					}
+				],
+				"name": "RegisterPatient",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "GetPatients",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		];
+				var contractaddress = '{{ contract_address[0] }}';//'0x28f918ab89bdbf270ca65b5b36450e52cf7e7f1c';
+				var myAbi = web3.eth.contract(abi);
+				var myfunction = myAbi.at(contractaddress);
+				
+				function GetPatientData() {    
+				myfunction.GetPatients.call(function (error, result) {
+						if (!error) { 
+							var table = document.getElementById('myTable');
+							for(var i=0;i<result;i++)
+							{
+								myfunction.RetrivePatientDetails.call(i+1,function(error,results){
+									if(!error){
+										var row = table.insertRow(1);
+										var cell1 = row.insertCell(0);
+										var cell2 = row.insertCell(1);
+										var cell3 = row.insertCell(2);
+										var cell4 = row.insertCell(3);
+										//var cell5 = row.insertCell(4);
+										cell1.innerHTML = results[0];
+										cell2.innerHTML = results[1];
+										cell3.innerHTML = results[2];
+										cell4.innerHTML = results[4];
+										//cell5.innerHTML = '<button class="vap" style="vertical-align:middle" onclick="myfun();Doctor();"><span>book</span></button>';
+									}
+									else
+									alert(error);
+								});
+							}
+						 }
+						 else
+						 alert(error);
+					}
+				)
+			}
+		
+		
+				function RegPatient() {
+				 var p = document.getElementById('id01');
+		
+					p.style.display = "none";
+		 
+					var p1 = document.getElementById('pname').value;
+					var p2 = document.getElementById('pemail').value;
+					var p4 = document.getElementById('padd').value;
+					var p5 = document.getElementById('pcity').value;
+					var p6 = document.getElementById('pstate').value;
+					var p7 = document.getElementById('pcontact').value;
+					var p8 = document.getElementById('psex').value;
+					var p9 = ""+document.getElementById('pbd').value;
+					var p10 = document.getElementById('pmar').value;
+					var p12 = p4+"-"+p5+"-"+p6;
+		
+			 myfunction.RegisterPatient.sendTransaction(
+					p1, p2, p8, p9, p7, p10, p12, function(error, result){
+					 if(!error) {alert(result);}
+					});
+				}
+		
+				var abi2 = [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Mappings",
+				"outputs": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "problem",
+						"type": "string"
+					},
+					{
+						"name": "date",
+						"type": "string"
+					},
+					{
+						"name": "Doct",
+						"type": "uint256"
+					},
+					{
+						"name": "status",
+						"type": "uint256"
+					},
+					{
+						"name": "Id",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "key",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdatePatientAppointment",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "GetAppointments",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "key",
+						"type": "uint256"
+					}
+				],
+				"name": "RetrivePatientAppointment",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "email",
+						"type": "string"
+					},
+					{
+						"name": "gender",
+						"type": "string"
+					},
+					{
+						"name": "contact",
+						"type": "uint256"
+					},
+					{
+						"name": "problem",
+						"type": "string"
+					},
+					{
+						"name": "date",
+						"type": "string"
+					},
+					{
+						"name": "Doct",
+						"type": "uint256"
+					}
+				],
+				"name": "RegisterPatientAppintment",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		];
+				var contractaddress2 = '{{ contract_address[2] }}';//'0x5c43f8de33929988c5c70a86674c0af63c61e84b';
+				var myAbi2 = web3.eth.contract(abi2);
+				var myfunction2 = myAbi2.at(contractaddress2);
+		
+				function bookAppointment(){
+					var p = document.getElementById('id00');
+					p.style.display = "none";
+					var p1 = document.getElementById('Bpid').value;
+					var p9 = document.getElementById('Bpprob').value;
+					var p10 = document.getElementById('doctor').value;
+					var d=new Date();
+					var p11 = ""+d.getDate()+"-"+(d.getMonth()+1)+"-"+d.getFullYear();
+					myfunction.RetrivePatientDetails.call(p1, (error, result) => {
+						
+					myfunction2.RegisterPatientAppintment.sendTransaction(
+						p1,result[1],result[2],result[4],p9,p11,p10, function(error, value){
+							if(!error) {}
+							else alert(error);
+						});
+					});
+				}
+		
+		</script>
+		
+		
+		<script>
+		function refpop1()
+		{
+		var p= document.getElementById('id01');
+		p.style.display="none";
+		var p1= document.getElementById('pname');
+		var p2= document.getElementById('pemail');
+		var p3= document.getElementById('pmar');
+		var p4= document.getElementById('padd');
+		var p5= document.getElementById('pcity');
+		var p6= document.getElementById('pstate');
+		var p7= document.getElementById('pcontact');
+		var p8= document.getElementById('psex');
+		var p9= document.getElementById('pbd');
+		var p10= document.getElementById('pmar');
+		var p11= document.getElementById('ptext');
+		//var p12= document.getElementById('rn');
+		//var p13= document.getElementById('ry');
+		//p12.checked=false;
+		//p13.checked=false;
+		p1.value="";p2.value="";p3.value="none";p4.value="";p5.value="";p6.value="";p7.value="";p8.value="none";p9.value="";p10.value="";p11.value="";
+		
+		}
+		</script>
+			
+
+	
+<script>
+function refpop0()
+{
+var p= document.getElementById('id00');
+p.style.display="none";
+var p1= document.getElementById('Bpid');
+var p2= document.getElementById('Bpemail');
+var p7= document.getElementById('Bpcontact');
+var p8= document.getElementById('Bpsex');
+var p14= document.getElementById('department');
+var p15= document.getElementById('doctor');
+var p16= document.getElementById('Bpprob');
+p14.value="";
+p15.value="";
+p16.value="";
+p1.value="";p2.value="";p7.value="";p8.value="none";
+
+}
+</script>	
+
+
+
+
+	<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="register_patient" method="POST">
+    <div class="imgicontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/images/img_avatar2.png" alt="Avatar" class="avatari">
+    </div>
+<h2 style="color:black;">New Patient Registration</h2>
+<p style="color:black;">Fill in the form below</p>
+<hr noshade style="color:black;">
+    <div class="containers">
+      <label for="uname"><b>Name</b></label><input type="text" id="pname" style="width:300px;height:40px;margin-left:66px;" placeholder="Enter Patient name" name="uname" required>
+<br><br>
+	  
+      <label for="email"><b>Email</b></label><input type="email" id="pemail" style="width:300px;height:40px;margin-left:69px;" placeholder="Enter Email" name="email" required>
+<br><br>
+<label for="sex"><b>Sex</b></label>
+<select name="sex" id="psex" style="margin-left:82px;">
+    <option value="none"></option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+        <label for="bdate"><b>Birthday</b></label><input type="date" id="pbd" style="width:300px;height:40px;margin-left:48px;" name="bdate" required>
+		<hr noshade>
+		        <label for="contact"><b>Contact</b></label><input  id="pcontact" type="number" style="width:300px;height:40px;margin-left:53px;" name="contact" required>
+<br><br>
+<label for="marsta"><b>Marital Status</b></label>
+<select name="marital" id="pmar" style="margin-left:5px;">
+    <option value="none"></option>
+    <option value="male">Single</option>
+    <option value="female">Married</option>
+	    <option value="male">Divorced</option>
+    <option value="female">Legally separated</option>
+	    <option value="male">Widowed</option>
+  </select>
+  <br><br>
+  	<label for="address"><b>Address</b></label><input id="padd" type="text" style="width:300px;height:40px;margin-left:50px;" placeholder="street address" name="streetaddress" required>
+    <input type="text" id="pcity" style="width:300px;height:40px;" placeholder="city" name="city" required>
+	<br>
+	<input type="text" id="pstate" style="width:300px;height:40px;margin-left:110px;" placeholder="state" name="state" required>
+	<hr noshade>
+	   
+      <button class="asas" onclick="RegPatient();" type="submit">Register</button>
+    </div>
+
+    <div class="containers" style="background-color:#f1f1f1">
+      <button type="button" onclick="refpop1()" class="cancelbtn">Cancel</button>
+     
+    </div>
+  </form>
+</div>
+
+<script src="web3.min.js"></script>
+
+<script src="js/require.js"></script>
+
+
+
+<!--
+<div id="id04" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgicontainer">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/img_avatar2.png" alt="Avatar" class="avatari">
+    </div>
+
+  <h2 style="color:black;">Pharmacist Registration</h2>
+<p style="color:black;">Fill in the form below</p>
+<hr noshade>
+    <div class="containers">
+      <label for="uname"><b>Name</b></label><input type="text" id="dname" style="width:300px;height:40px;margin-left:66px;" placeholder="Enter Pharmacist name" name="uname" required>
+<br><br>
+	  
+      <label for="email"><b>Email</b></label><input type="email" id="demail" style="width:300px;height:40px;margin-left:69px;" placeholder="Enter Email" name="email" required>
+<br><br>
+<label for="sex"><b>Sex</b></label>
+<select name="sex" id="dsex" style="margin-left:82px;">
+    <option value="none"></option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+  <hr noshade>
+		        <label for="contact"><b>Contact</b></label><input id="dcontact" type="number" style="width:300px;height:40px;margin-left:53px;" name="contact" required>
+<br><br>
+      <label for="dept"><b>Department</b></label><input type="text" id="ddep" style="width:300px;height:40px;margin-left:22px;" placeholder="Enter department" name="dept" required>
+  <br><br>
+  	<label for="address"><b>Address</b></label><input type="text" id="dadd" style="width:300px;height:40px;margin-left:50px;" placeholder="street address" name="streetaddress" required>
+    <input type="text" id="dcity" style="width:300px;height:40px;" placeholder="city" name="city" required>
+	<br>
+	<input type="text" id="dstate" style="width:300px;height:40px;margin-left:110px;" placeholder="state" name="state" required>
+	<hr noshade>	
+
+
+	   
+      <button class="asas" type="submit">Register</button>
+    </div>
+
+    <div class="containers" style="background-color:#f1f1f1">
+      <button type="button" onclick="refpop4();" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<script>
+function refpop4()
+{
+var p= document.getElementById('id04');
+var p1= document.getElementById('dname');
+var p2= document.getElementById('demail');
+var p3= document.getElementById('ddep');
+var p4= document.getElementById('dadd');
+var p5= document.getElementById('dcity');
+var p6= document.getElementById('dstate');
+var p7= document.getElementById('dcontact');
+var p8= document.getElementById('dsex');
+p1.value="";p2.value="";p3.value="";p4.value="";p5.value="";p6.value="";p7.value="";p8.value="none";
+p.style.display="none";
+}
+</script>
+
+-->
+
+
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="register_doctor" method="POST">
+    <div class="imgicontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/images/img_avatar2.png" alt="Avatar" class="avatari">
+    </div>
+
+  <h2 style="color:black;">New Doctor Registration</h2>
+<p style="color:black;">Fill in the form below</p>
+<hr noshade>
+    <div class="containers">
+      <label for="uname"><b>Name</b></label><input type="text" id="dname" style="width:300px;height:40px;margin-left:66px;" placeholder="Enter Doctor name" name="duname" required>
+<br><br>
+	  
+      <label for="email"><b>Email</b></label><input type="email" id="demail" style="width:300px;height:40px;margin-left:69px;" placeholder="Enter Email" name="demail" required>
+<br><br>
+<label for="sex"><b>Sex</b></label>
+<select name="sex" id="dsex" style="margin-left:82px;">
+    <option value="none"></option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+  <hr noshade>
+		        <label for="contact"><b>Contact</b></label><input id="dcontact" type="number" style="width:300px;height:40px;margin-left:53px;" name="contact" required>
+<br><br>
+      <label for="dept"><b>Department</b></label><!--<input type="text" id="ddep" style="width:300px;height:40px;margin-left:22px;" placeholder="Enter department" name="dept" required>-->
+      <select id="ddep" style="width:300px;height:40px;margin-left:22px;" placeholder="Enter department" name="department" required>
+          <option value="Neurologists">Neurologists</option>
+          <option value="Dermatologists">Dermatologists</option>
+          <option value="Physiatrists">Physiatrists</option>
+          <option value="Oncologists">Oncologists</option>
+        </select>
+  <br><br>
+  	<label for="address"><b>Address</b></label><input type="text" id="dadd" style="width:300px;height:40px;margin-left:50px;" placeholder="street address" name="streetaddress" required>
+    <input type="text" id="dcity" style="width:300px;height:40px;" placeholder="city" name="city" required>
+	<br>
+	<input type="text" id="dstate" style="width:300px;height:40px;margin-left:110px;" placeholder="state" name="state" required>
+	<hr noshade>	
+
+      <button class="asas" onclick="RegDoctor();" type="submit">Register</button>
+    </div>
+
+    <div class="containers" style="background-color:#f1f1f1">
+      <button type="button" onclick="refpop2();" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<script>
+  
+function refpop2()
+{
+var p= document.getElementById('id02');
+var p1= document.getElementById('dname');
+var p2= document.getElementById('demail');
+var p3= document.getElementById('ddep');
+var p4= document.getElementById('dadd');
+var p5= document.getElementById('dcity');
+var p6= document.getElementById('dstate');
+var p7= document.getElementById('dcontact');
+var p8= document.getElementById('dsex');
+p1.value="";p2.value="";p3.value="";p4.value="";p5.value="";p6.value="";p7.value="";p8.value="none";
+p.style.display="none";
+}
+</script>
+
+
+<script>
+var abi4 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterLabtech",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabtech",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveLabtechDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress4 = '{{ contract_address[4] }}';//'{{ contract_address[4] }}';//'0x8d90c15b73b6751271d7ff2f3284c94d47567968';
+    var myAbi4 = web3.eth.contract(abi4);
+		var myfunction4 = myAbi4.at(contractaddress4);
+
+		function Reglabtech() {
+		
+		var p11 = document.getElementById('id03');
+
+		 p11.style.display = "none";
+		 var p111 = document.getElementById('ldname').value;
+		 var p12 = document.getElementById('ldemail').value;
+		 var p14 = document.getElementById('ldadd').value;
+		 var p15 = document.getElementById('ldcity').value;
+		 var p16 = document.getElementById('ldstate').value;
+		 var p17 = document.getElementById('ldcontact').value;
+		 var p18 = document.getElementById('ldsex').value;
+		 var p19 = document.getElementById('lddep').value;
+		 var p112 = p14+"-"+p15+"-"+p16;
+	 myfunction4.RegisterLabtech.sendTransaction(
+		 p111, p12, p18, p17, p19, p112, function(error, result){
+			if(!error) {alert(result); }
+			else alert(error);
+		 }
+	 )
+	 }
+
+</script>
+
+<div id="id03" class="modal">
+  
+	<form class="modal-content animate" action="/register_labtech" method="POST">
+    <div class="imgicontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../static/images/img_avatar2.png" alt="Avatar" class="avatari">
+    </div>
+
+  <h2 style="color:black;">Lab technician Registration</h2>
+<p style="color:black;">Fill in the form below</p>
+<hr noshade>
+    <div class="containers">
+      <label for="uname"><b>Name</b></label><input type="text" id="ldname" style="width:300px;height:40px;margin-left:66px;" placeholder="Enter technician name" name="uname" required>
+<br><br>
+	  
+      <label for="email"><b>Email</b></label><input type="email" id="ldemail" style="width:300px;height:40px;margin-left:69px;" placeholder="Enter Email" name="email" required>
+<br><br>
+<label for="sex"><b>Sex</b></label>
+<select name="sex" id="ldsex" style="margin-left:82px;">
+    <option value="none"></option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+  <hr noshade>
+		        <label for="contact"><b>Contact</b></label><input id="ldcontact" type="number" style="width:300px;height:40px;margin-left:53px;" name="contact" required>
+<br><br>
+      <!--<label for="dept"><b>Department</b></label><input type="text" id="lddep" style="width:300px;height:40px;margin-left:22px;" placeholder="Enter department" name="dept" required>-->
+			<label for="dept"><b>Department</b></label>
+			<select name="lddep" id="lddep" style="margin-left:82px;">
+					<option value="none"></option>
+					<option value="hematology">Hematology</option>
+					<option value="radiology">Radiology</option>
+				</select>
+			<br><br>
+  	<label for="address"><b>Address</b></label><input type="text" id="ldadd" style="width:300px;height:40px;margin-left:50px;" placeholder="street address" name="streetaddress" required>
+    <input type="text" id="ldcity" style="width:300px;height:40px;" placeholder="city" name="city" required>
+	<br>
+	<input type="text" id="ldstate" style="width:300px;height:40px;margin-left:110px;" placeholder="state" name="state" required>
+	<hr noshade>	
+
+
+	   
+      <button class="asas" onclick="Reglabtech();" type="submit">Register</button>
+    </div>
+
+    <div class="containers" style="background-color:#f1f1f1">
+      <button type="button" onclick="refpop3();" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>
+
+<script>
+function refpop3()
+{
+var p= document.getElementById('id03');
+var p1= document.getElementById('ldname');
+var p2= document.getElementById('ldemail');
+var p3= document.getElementById('lddep');
+var p4= document.getElementById('ldadd');
+var p5= document.getElementById('ldcity');
+var p6= document.getElementById('ldstate');
+var p7= document.getElementById('ldcontact');
+var p8= document.getElementById('ldsex');
+p1.value="";p2.value="";p3.value="none";p4.value="";p5.value="";p6.value="";p7.value="";p8.value="none";
+p.style.display="none";
+}
+</script>
+
+
+
+
+
+
+<div style="height:400px;">
+<style>
+#myInput1 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  height: 200%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.head12, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<h6 style="color:black;">Patients Registered</h6>
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<script>
+function myfun()
+{
+var p= document.getElementById('id00');
+p.style.display="block";
+}
+</script>
+
+<style>
+.vap {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap:hover span {
+  padding-right: 25px;
+}
+
+.vap:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<input type="text" id="myInput1" onkeyup="myFunction12()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable">
+  <tr class="head12">
+    <th style="width:30%;">Name</th>
+    <th style="width:20%;">Email</th>
+    <th style="width:20%;">Sex</th>
+    <th style="width:20%;">Contact</th>
+    <!--<th style="width:10%;">view</th>-->
+  </tr>
+  <tr></tr>
+</table>
+</div>
+<script>
+  
+
+function myFunction12() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id00');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+<style>
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.asas {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.papa {
+    background-color: white;
+    color: #838383;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.asas:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgicontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatari {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.containers {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 10%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>submit_requests_by_pharmacist</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+<body>
+
+
+
+<div class="super_container" style="border:1px solid black;height:170px;">
+	<div class="home">
+		
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<h3><span style="color:green">EHR</span><span style="color:red">+</span></h3>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_phone">
+											<span>Hi user</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li class="active"><a href="index.html">Home</a></li>
+													<li class="active"><a href="index.html">Profile</a></li>
+													<li class="active"><a href="index.html">Logout</a></li>
+												        <li class="active"><a href="index.html">Requests</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>	
+	</div>
+</div>
+
+
+<hr>
+<h3 style="text-align:center;">SUBMIT MEDICINES</h3>
+<hr>
+
+<div style="float:left;">
+<h2 style="margin-left:50px;">TREATMENT</h2>
+<div style="width:400px;height:350px;border:2px solid green;margin-left:50px;">
+<textarea style="width:395px;min-height:347px;"></textarea>
+</div>
+</div>
+
+<div style="width:65%;float:left;margin-top:63px;margin-left:2px;">
+<h4 style="color:black;">SUBMIT MEDICINES</h4>
+
+<script>
+var rowId = 0;
+
+function addMoreRows() {
+   var table = document.getElementById("tbl_id");
+
+    var row = table.insertRow();
+  var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4)
+
+ cell3.innerHTML = "<input type='text'>";
+    cell2.innerHTML = "<input type='text'>";
+     cell4.innerHTML = "<input type='text'>";
+    cell5.innerHTML = "<input type='text'>";
+
+    cell1.innerHTML = '<input type="checkbox" id="delete' + getRowId() + '">';
+
+}
+
+function deleteMoreRows(tableID) {
+
+    var table = document.getElementById(tableID);
+    var rowCount = table.rows.length;
+    var selectedRows = getCheckedBoxes();
+
+    selectedRows.forEach(function(currentValue) {
+      deleteRowByCheckboxId(currentValue.id);
+    });
+}
+
+function getRowId() {
+  rowId += 1;
+  return rowId;
+}
+
+function getRowIdsFromElements($array) {
+  var arrIds = [];
+
+  $array.forEach(function(currentValue, index, array){
+    arrIds.push(getRowIdFromElement(currentValue));
+  });
+
+  return arrIds;
+}
+
+function getRowIdFromElement($el) {
+    return $el.id.split('delete')[1];
+}
+
+
+function getCheckedBoxes() {
+  var inputs = document.getElementsByTagName("input");
+  var checkboxesChecked = [];
+
+
+  for (var i=0; i < inputs.length; i++) {
+   
+     if (inputs[i].checked) {
+        checkboxesChecked.push(inputs[i]);
+     }
+  }
+
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+}
+
+
+function deleteRowByCheckboxId(CheckboxId) {
+    var checkbox = document.getElementById(CheckboxId);
+    var row = checkbox.parentNode.parentNode;          
+    var table = row.parentNode;
+
+    while ( table && table.tagName != 'TABLE' )
+        table = table.parentNode;
+    if (!table) return;
+    table.deleteRow(row.rowIndex);
+}
+</script>
+<div>
+<form>
+
+   <input type="button" id="mysubmit" class="vap" value="Add Medicine" onClick="addMoreRows()" style="width:100px;">
+   <input type="button" id="delete" value="Delete" class="vap" onClick="deleteMoreRows('tbl_id')">
+</form>
+<table id="tbl_id" style="text-align:center" align="center" valign="top">
+   <thead>
+      <tr >
+         <th style="width:200px;"><span style="margin-left:70px;">Delete</span></th>
+         <th style="width:200px;"><span style="margin-left:80px;">NAME</span></th>
+         <th style="width:200px;"><span style="margin-left:80px;">COMPANY</span></th>
+	 <th style="width:200px;"><span style="margin-left:80px;">QUNATITY</span></th>
+	 <th style="width:200px;"><span style="margin-left:80px;">COST/UNIT</span></th>
+      </tr>
+   </thead>
+</table>
+<style>
+.vap {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap:hover span {
+  padding-right: 25px;
+}
+
+.vap:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<button type="submit" class="vap">SUBMIT</button>
+<br>
+<br>
+
+</div>    
+
+</div>
+
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

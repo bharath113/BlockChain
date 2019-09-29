@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>lab_blood_report</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+		<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+<body>
+
+
+
+<div class="super_container" style="border:1px solid black;height:170px;">
+	<div class="home">
+		
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<h3><span style="color:green">EHR</span><span style="color:red">+</span></h3>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_phone">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li class="active"><a href="/">Home</a></li>
+													
+													<li class="active"><a href="/logout">Logout</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>	
+	</div>
+</div>
+
+<script>
+var key;
+				window.onload = function () {
+						if (typeof web3 !== 'undefined') {
+								web3 = new Web3(web3.currentProvider);
+								key = web3.eth.accounts[0];
+						} else {
+								// set the provider you want from Web3.providers
+								web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+								key = web3.eth.accounts[0];
+						}
+		}
+
+    var abi = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "birthday",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "maritalStatus",
+				"type": "bool"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "birthday",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "maritalStatus",
+				"type": "bool"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterPatient",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetPatients",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress = '{{ contract_address[0] }}';//'0x28f918ab89bdbf270ca65b5b36450e52cf7e7f1c';
+    var myAbi = web3.eth.contract(abi);
+    var myfunction = myAbi.at(contractaddress);
+
+    var abi1 =[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveDocotorDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetDoctors",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress1 = '{{ contract_address[1] }}';//'0x5f1e5df4adc8f279ba313c941252b8ebc9ebb537';
+    var myAbi1 = web3.eth.contract(abi1);
+    var myfunction1 = myAbi1.at(contractaddress1);
+
+    var abi5 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "appid",
+				"type": "uint256"
+			}
+		],
+		"name": "RegisterPatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppointments",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "Pid",
+				"type": "uint256"
+			},
+			{
+				"name": "appId",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "status",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress5 = '{{ contract_address[5] }}';//'0xea8694609324196dc7057f4f54e804581a85704c';
+    var myAbi5 = web3.eth.contract(abi5);
+    var myfunction5 = myAbi5.at(contractaddress5);
+
+    myfunction5.RetrivePatientLabAppointment.call({{appId}}, (error, result) => {
+         document.getElementById("Date").innerHTML = result[1];
+         document.getElementById("Pid").innerHTML = result[0];
+         document.getElementById("Tid").innerHTML = result[4];
+     myfunction.RetrivePatientDetails.call(result[0], (err, results) => {
+       document.getElementById("PName").innerHTML = results[0];
+       document.getElementById("Pgen").innerHTML = results[2];
+     });
+     myfunction1.RetriveDocotorDetails.call(result[3], (errr, res) => {
+       document.getElementById("DName").innerHTML = res[0];
+     });
+    });
+		
+
+		var abi6 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "EnterLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "ide",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress6 = '{{ contract_address[6] }}';//'0x2871c020db65f400cba6275af034af34ed55b9ae';
+    var myAbi6 = web3.eth.contract(abi6);
+    var myfunction6 = myAbi6.at(contractaddress6);
+
+function add_report(){
+	var table = document.getElementById('tbl_id');
+	var row_len = table.rows.length;
+ data=""
+	for(var i=1;i<row_len;i++){
+		id="T"+i;
+		data+=document.getElementById(id).value+"---";
+	}
+	data+={{ labId }}+"---";
+	data+={{ appId }};
+
+	myfunction5.RetrivePatientLabAppointment.call({{appId}}, (error, result) => {
+myfunction6.EnterLabAppData.sendTransaction(result[0], data, (err,res)=>{
+	 if(err)
+	 alert(err);
+ });
+ 
+ myfunction5.UpdatePatientLabAppointment.sendTransaction({{ appId }}, (error,result)=>{
+	 if(error)
+	 alert(error);
+ });
+	});
+}
+
+</script>
+
+<hr style="height:2px;">
+<h2 style="text-align:center;">LABORATORY REPORT</h2>
+<hr style="height:2px;">
+<form>
+<div style="margin-left:350px;;width:60%;">
+<div>
+<label>NAME:</label> <span id="PName"></span>
+<label style="float:right;margin-right:250px;">PATIENT ID: <span id="Pid"></span></label> 
+</div>
+<div>
+<label>DATE:</label> <span id="Date"></span>
+<label style="float:right;margin-right:250px;">SEX: <span id="Pgen"></span></label> 
+</div>
+<div>
+<label>DOCTOR:</label> <span id="DName"></span>
+<label style="float:right;margin-right:250px;">TEST ID: <span id="Tid"></span></label>
+</div>
+</div>
+<hr style="height:2px;">
+<h2 style="text-align:center;">COMPLETE BLOOD COUNT</h2>
+<hr style="height:2px;">
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+</style>
+
+<table style="margin-left:350px;width:50%;" id="tbl_id">
+  <tr>
+    <th style="width:20%">Test Name</th>
+    <th style="width:10%">Result</th>
+    <th style="width:10%">Normal Range</th>
+    <th style="width:10%">Units</th>
+  </tr>
+  <tr>
+    <td>Hemoglobin</td>
+    <td><input type="text" id="T1"></td>
+    <td style="text-align:center;">11.0-16.0</td>
+     <td style="text-align:center;">g/dl</td>
+  </tr>
+  <tr>
+    <td>RBC</td>
+    <td><input type="text" id="T2"></td>
+        <td style="text-align:center;">3.5-5.50</td>
+     <td style="text-align:center;">10^6/ul</td>
+  </tr>
+  <tr>
+    <td>HCT</td>
+    <td><input type="text" id="T3"></td>
+     <td style="text-align:center;">37.0-50.0</td>
+     <td style="text-align:center;">%</td>
+  </tr>
+  
+   <tr>
+    <td>WBC</td>
+    <td><input type="text" id="T4"></td>
+      <td style="text-align:center;">4.5-11</td>
+    <td style="text-align:center;">10^3/ul</td>
+  </tr>
+   
+   <tr>
+    <td>PLT</td>
+    <td><input type="text" id="T5"></td>
+    <td style="text-align:center;">150-450</td>
+    <td style="text-align:center;">10^3/ul</td>
+  </tr>
+
+</table>
+
+<style>
+  #asa {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+  
+  #asa {border-radius: 2px;}
+  </style>
+<form methods="POST" action="/lab_tech">
+<button id="asa" type="submit" onclick="add_report()" href="#" style="margin-left:650px;">submit</button>
+</form>
+<br>
+<br>
+
+</form>
+
+
+
+
+
+
+
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>appointment_details_of_patient</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ </head>
+<body>
+
+
+
+<div class="super_container" style="border:1px solid black;height:170px;">
+	<div class="home">
+		
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<h3><span style="color:green">EHR</span><span style="color:red">+</span></h3>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_phone">
+											<span>Hi user</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li class="active"><a href="/">Home</a></li>
+							
+													<li class="active"><a href="/logout">Logout</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>	
+	</div>
+</div>
+
+<h2 style="text-align:center;">APPOINTMENT DETAILS</h2>
+
+
+<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:200px">
+  <h5 class="w3-bar-item">DETAILS</h5>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')">HOSPITAL</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Left')">DOCTOR</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom')">TREATMENT</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fad')">LAB REPORTS</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Botto')">BILLING</button>
+</div>
+
+<div style="margin-left:200px">
+
+  <div id="Fade" class="w3-container city w3-animate-opacity" style="display:none">
+    <h2>HOSPITAL</h2>
+
+  </div>
+
+  <div id="Left" class="w3-container city w3-animate-left" style="display:none">
+    <h2>DOCTOR</h2>
+
+  </div>
+
+  <div id="Zoom" class="w3-container city w3-animate-zoom" style="display:none">
+    <h2>TREATMENT</h2>
+
+     <div style="height:400px;">
+<style>
+#myInput11 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable1 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable1 th, #myTable1 td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable1 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable1 tr.head12, #myTable1 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 320px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<style>
+.vap1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap1:hover span {
+  padding-right: 25px;
+}
+
+.vap1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<input type="text" id="myInput11" onkeyup="myFunction12()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable1">
+  <tr class="head12">
+    <th style="width:20%;">Hospital</th>
+    <th style="width:20%;">Patient</th>
+    <th style="width:20%;">Department</th>
+    <th style="width:20%;">DateOfVisit</th>
+    <th style="width:10%;">Contact</th>
+    <th style="width:10%;">Full Details</th>
+  </tr>
+  <tr>
+    <td>ialites</td>
+    <td>PAT</td>
+    <td>DEPT</td>
+    <td>Date</td>
+    <td>contact</td>
+    <td><button class="vap1"  style="vertical-align:middle" >view</button></td>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction12() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput11");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+    
+  </div>
+   <div id="Fad" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>LAB REPORTS</h2>
+
+     <div style="height:400px;">
+<style>
+#myInput12 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable2 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable2 th, #myTable2 td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable2 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable2 tr.head12, #myTable2 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 320px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<style>
+.vap2 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap2:hover span {
+  padding-right: 25px;
+}
+
+.vap2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<input type="text" id="myInput12" onkeyup="myFunction121()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable2">
+  <tr class="head12">
+    <th style="width:20%;">Hospital</th>
+    <th style="width:20%;">Patient</th>
+    <th style="width:20%;">Department</th>
+    <th style="width:20%;">DateOfVisit</th>
+    <th style="width:10%;">Contact</th>
+    <th style="width:10%;">Full Details</th>
+  </tr>
+  <tr>
+    <td>ialites</td>
+    <td>PAT</td>
+    <td>DEPT</td>
+    <td>Date</td>
+    <td>contact</td>
+    <td><button class="vap2"  style="vertical-align:middle" >view</button></td>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction121() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput12");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+    
+  </div>
+    <div id="Botto" class="w3-container city w3-animate-right" style="display:none">
+    <h2>BILLING</h2>
+
+     <div style="height:400px;">
+<style>
+#myInput13 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable3 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable3 th, #myTable3 td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable3 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable3 tr.head12, #myTable3 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 320px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<style>
+.vap3 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap3:hover span {
+  padding-right: 25px;
+}
+
+.vap3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<input type="text" id="myInput13" onkeyup="myFunction123()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable3">
+  <tr class="head12">
+    <th style="width:20%;">Hospital</th>
+    <th style="width:20%;">Patient</th>
+    <th style="width:20%;">Department</th>
+    <th style="width:20%;">DateOfVisit</th>
+    <th style="width:10%;">Contact</th>
+    <th style="width:10%;">Full Details</th>
+  </tr>
+  <tr>
+    <td>ialites</td>
+    <td>PAT</td>
+    <td>DEPT</td>
+    <td>Date</td>
+    <td>contact</td>
+    <td><button class="vap3"  style="vertical-align:middle" >view</button></td>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction123() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput13");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable3");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<script>
+function openLink(evt, animName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(animName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Elements</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/elements.css">
+<link rel="stylesheet" type="text/css" href="styles/elements_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Menu -->
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<form action="#" class="menu_search_form">
+				<input type="text" class="menu_search_input" placeholder="Search" required="required">
+				<button class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+			<ul>
+				<li class="menu_item"><a href="index.html">Home</a></li>
+				<li class="menu_item"><a href="#">About us</a></li>
+				<li class="menu_item"><a href="#">Services</a></li>
+				<li class="menu_item"><a href="news.html">News</a></li>
+				<li class="menu_item"><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<ul>
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/elements.jpg" data-speed="0.8"></div>
+
+		<!-- Header -->
+
+		<header class="header" id="header">
+			<div>
+				<div class="header_top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+									<div class="logo">
+										<a href="#">health<span>+</span></a>	
+									</div>
+									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+										<div class="header_top_nav">
+											<ul class="d-flex flex-row align-items-center justify-content-start">
+												<li><a href="#">Help Desk</a></li>
+												<li><a href="#">Emergency Services</a></li>
+												<li><a href="#">Appointment</a></li>
+											</ul>
+										</div>
+										<div class="header_top_phone">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>+34 586 778 8892</span>
+										</div>
+									</div>
+									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li><a href="index.html">Home</a></li>
+													<li><a href="about.html">About Us</a></li>
+													<li><a href="services.html">Services</a></li>
+													<li class="active"><a href="news.html">News</a></li>
+													<li><a href="contact.html">Contact</a></li>
+												</ul>
+											</nav>
+											<div class="search_content d-flex flex-row align-items-center justify-content-end ml-auto">
+												<form action="#" id="search_container_form" class="search_container_form">
+													<input type="text" class="search_container_input" placeholder="Search" required="required">
+													<button class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>
+
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title">Elements</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Elements -->
+
+	<div class="elements">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					
+					<!-- Buttons -->
+					<div class="buttons">
+						<div class="elements_title">Button</div>
+						<div class="buttons_content">
+							<div class="button button_1 elements_button"><a href="#"><span>send message</span><span>send message</span></a></div>
+							<div class="button button_2 elements_button"><a href="#"><span>send message</span><span>send message</span></a></div>
+							<div class="button button_3 elements_button"><a href="#"><span>send message</span><span>send message</span></a></div>
+						</div>
+					</div>
+
+					<!-- Accordions -->
+					<div class="accordions">
+						<div class="elements_title">Accordions</div>
+						<div class="accordions_container">
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center active"><div>Maecenas fermentum tortor id fringilla molestie.</div></div>
+								<div class="accordion_panel">
+									<div>
+										<p>Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris. Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"><div>Duis quis lacinia elit. Etiam varius mi eget lacus ultricies elementum</div></div>
+								<div class="accordion_panel">
+									<div>
+										<p>Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris. Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"><div>Maecenas fermentum tortor id fringilla molestie.</div></div>
+								<div class="accordion_panel">
+									<div>
+										<p>Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris. Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Tabs -->
+
+					<div class="elements_tabs">
+						<div class="elements_title">Tabs</div>
+						<div class="tabs_content">
+							<div class="row">
+								<div class="col-lg-5">
+
+									<!-- Tabs -->
+									<div class="tabs d-flex flex-row align-items-center justify-content-start flex-wrap">
+										<div class="tab active">
+											<div class="tab_title">Discuss</div>
+											<div class="tab_text">Lorem ipsum dolor sit amet, consectetur adipis voelta.</div>
+										</div>
+										<div class="tab">
+											<div class="tab_title">Create</div>
+											<div class="tab_text">Lorem ipsum dolor sit amet, consectetur adipis voelta.</div>
+										</div>
+										<div class="tab">
+											<div class="tab_title">Brainstorm</div>
+											<div class="tab_text">Lorem ipsum dolor sit amet, consectetur adipis voelta.</div>
+										</div>
+										<div class="tab">
+											<div class="tab_title">The Project</div>
+											<div class="tab_text">Lorem ipsum dolor sit amet, consectetur adipis voelta.</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7">
+
+									<!-- Panels -->
+									<div class="tab_panels">
+
+										<!-- Panel -->
+										<div class="tab_panel active">
+											<div class="tab_panel_content">
+												<div class="tab_list">
+													<ul>
+														<li>
+															<div class="tab_list_title">Cardiology</div>
+															<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Gastroenterology</div>
+															<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Medical Lab</div>
+															<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<!-- Panel -->
+										<div class="tab_panel">
+											<div class="tab_panel_content">
+												<div class="tab_list">
+													<ul>
+														<li>
+															<div class="tab_list_title">Cardiology</div>
+															<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Gastroenterology</div>
+															<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Medical Lab</div>
+															<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<!-- Panel -->
+										<div class="tab_panel">
+											<div class="tab_panel_content">
+												<div class="tab_list">
+													<ul>
+														<li>
+															<div class="tab_list_title">Cardiology</div>
+															<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Gastroenterology</div>
+															<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Medical Lab</div>
+															<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<!-- Panel -->
+										<div class="tab_panel">
+											<div class="tab_panel_content">
+												<div class="tab_list">
+													<ul>
+														<li>
+															<div class="tab_list_title">Cardiology</div>
+															<div class="tab_list_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuad.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Gastroenterology</div>
+															<div class="tab_list_text"><p>Donec malesuada lorem maximus mauris scele risque, at rutrum nulla dictum.</p></div>
+														</li>
+														<li>
+															<div class="tab_list_title">Medical Lab</div>
+															<div class="tab_list_text"><p>Lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus.</p></div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+							
+					</div>
+
+					<!-- Loaders -->
+					<div class="loaders">
+						<div class="elements_title">Loaders</div>
+
+						<!-- Loaders -->
+						<div class="row loaders_container">
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.85">
+									<div class="loader_content">
+										<div class="loader_title">Professionals</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.90">
+									<div class="loader_content">
+										<div class="loader_title">Success</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.55">
+									<div class="loader_content">
+										<div class="loader_title">Doctors</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.63">
+									<div class="loader_content">
+										<div class="loader_title">Patients</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.85">
+									<div class="loader_content">
+										<div class="loader_title">Love</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-2 col-lg-4 col-md-6 loader_col">
+								<!-- Loader -->
+								<div class="loader" data-perc="0.90">
+									<div class="loader_content">
+										<div class="loader_title">Success</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Milestones -->
+					<div class="milestones">
+						<div class="elements_title">Milestones</div>
+						<div class="milestones_content">
+							<div class="row">
+
+								<!-- Milestone -->
+								<div class="col-lg-3 milestone_col">
+									<div class="milestone d-flex flex-row align-items-center justify-content-start">
+										<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_7.svg" alt=""></div>
+										<div class="milestone_content">
+											<div class="milestone_counter" data-end-value="365">0</div>
+											<div class="milestone_text">Days a year</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Milestone -->
+								<div class="col-lg-3 milestone_col">
+									<div class="milestone d-flex flex-row align-items-center justify-content-start">
+										<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_6.svg" alt=""></div>
+										<div class="milestone_content">
+											<div class="milestone_counter" data-end-value="25" data-sign-after="k">0</div>
+											<div class="milestone_text">Patients a year</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Milestone -->
+								<div class="col-lg-3 milestone_col">
+									<div class="milestone d-flex flex-row align-items-center justify-content-start">
+										<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_8.svg" alt=""></div>
+										<div class="milestone_content">
+											<div class="milestone_counter" data-end-value="125">0</div>
+											<div class="milestone_text">Amazing Doctors</div>
+										</div>
+										
+									</div>
+								</div>
+
+								<!-- Milestone -->
+								<div class="col-lg-3 milestone_col">
+									<div class="milestone d-flex flex-row align-items-center justify-content-start">
+										<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_9.svg" alt=""></div>
+										<div class="milestone_content">
+											<div class="milestone_counter" data-end-value="12" data-sign-after="k">0</div>
+											<div class="milestone_text">Lab Results</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<!-- Icon Boxes -->
+
+					<div class="icon_boxes">
+						<div class="elements_title">Icon Boxes</div>
+						<div class="row icon_boxes_row">
+				
+							<!-- Icon Box -->
+							<div class="col-lg-4 icon_box_col">
+								<div class="icon_box">
+									<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+										<div class="icon_box_icon"><img src="images/icon_1.svg" alt=""></div>
+										<div class="icon_box_title">Cardiology</div>
+									</div>
+									<div class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuada lorem maximus mauris.</div>
+								</div>
+							</div>
+
+							<!-- Icon Box -->
+							<div class="col-lg-4 icon_box_col">
+								<div class="icon_box">
+									<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+										<div class="icon_box_icon"><img src="images/icon_2.svg" alt=""></div>
+										<div class="icon_box_title">Gastroenterology</div>
+									</div>
+									<div class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuada lorem maximus mauris.</div>
+								</div>
+							</div>
+
+							<!-- Icon Box -->
+							<div class="col-lg-4 icon_box_col">
+								<div class="icon_box">
+									<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
+										<div class="icon_box_icon"><img src="images/icon_3.svg" alt=""></div>
+										<div class="icon_box_title">Medical Lab</div>
+									</div>
+									<div class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuada lorem maximus mauris.</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div>
+		<div class="footer_content">
+			<div class="container">
+				<div class="row">
+
+					<!-- Footer About -->
+					<div class="col-lg-3 footer_col">
+						<div class="footer_about">
+							<div class="logo">
+								<a href="#">health<span>+</span></a>	
+							</div>
+							<div class="footer_about_text">Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris.</div>
+							<div class="footer_social">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+						</div>
+					</div>
+					
+					<!-- Footer Contact -->
+					<div class="col-lg-5 footer_col">
+						<div class="footer_contact">
+							<div class="footer_contact_title">Quick Contact</div>
+							<div class="footer_contact_form_container">
+								<form action="#" class="footer_contact_form" id="footer_contact_form">
+									<div class="d-flex flex-xl-row flex-column align-items-center justify-content-between">
+										<input type="text" class="footer_contact_input" placeholder="Name" required="required">
+										<input type="email" class="footer_contact_input" placeholder="E-mail" required="required">
+									</div>
+									<textarea class="footer_contact_input footer_contact_textarea" placeholder="Message" required="required"></textarea>
+									<button class="footer_contact_button">send message</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer Hours -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_hours">
+							<div class="footer_hours_title">Opening Hours</div>
+							<ul class="hours_list">
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Monday – Thursday</div>
+									<div class="ml-auto">8.00 – 19.00</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Friday</div>
+									<div class="ml-auto">8.00 - 18.30</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Saturday</div>
+									<div class="ml-auto">9.30 – 17.00</div>
+								</li>
+								<li class="d-flex flex-row align-items-center justify-content-start">
+									<div>Sunday</div>
+									<div class="ml-auto">9.30 – 15.00</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
+							<nav class="footer_nav">
+								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+									<li class="active"><a href="index.html">Home</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="news.html">News</a></li>
+									<li><a href="contact.html">Contact</a></li>
+								</ul>
+							</nav>
+							<div class="footer_links">
+								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+									<li><a href="#">Help Desk</a></li>
+									<li><a href="#">Emergency Services</a></li>
+									<li><a href="#">Appointment</a></li>
+								</ul>
+							</div>
+							<div class="footer_phone ml-lg-auto">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<span>+34 586 778 8892</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/progressbar/progressbar.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/elements.js"></script>
+</body>
+</html>

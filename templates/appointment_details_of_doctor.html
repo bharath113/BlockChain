@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>appointment_details_of_doctor</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Health medical template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bootstrap4/bootstrap.min.css') }}">
+		<link href="{{ url_for('static', filename='plugins/font-awesome-4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='plugins/OwlCarousel2-2.2.1/animate.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main_styles.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/responsive.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ </head>
+<body style="padding-bottom:10px;">
+
+    <script>
+      
+    
+var abi1 =[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveDocotorDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetDoctors",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress1 = '{{ contract_address[1] }}';//'0x5f1e5df4adc8f279ba313c941252b8ebc9ebb537';
+    var myAbi1 = web3.eth.contract(abi1);
+    var myfunction1 = myAbi1.at(contractaddress1);
+
+
+        
+        myfunction1.RetriveDocotorDetails.call({{docId}}, (error, result) => {
+          document.getElementById("Doc_name").innerHTML = "Name: "+result[0];
+        });
+        </script>
+    
+    <div class="super_container" style="border:1px solid black;height:170px;">
+      <div class="home">
+        
+    
+        <!-- Header -->
+    
+        <header class="header" id="header">
+          <div>
+            <div class="header_top">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="header_top_content d-flex flex-row align-items-center justify-content-start">
+                      <div class="logo">
+                        <h3><span style="color:green">EHR</span><span style="color:red">+</span></h3>	
+                      </div>
+                      <div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
+                        <div class="header_top_phone">
+                            <span id="Doc_name"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+				
+
+				
+				<div class="header_nav" id="header_nav_pin">
+					<div class="header_nav_inner">
+						<div class="header_nav_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+											<nav class="main_nav">
+												<ul class="d-flex flex-row align-items-center justify-content-start">
+													<li class="active"><a href="/doctor">Home</a></li>
+													<li class="active"><a href="/logout">Logout</a></li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</header>	
+	</div>
+</div>
+
+<script>
+  function openLink(evt, animName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+    }
+    document.getElementById(animName).style.display = "block";
+    evt.currentTarget.className += " w3-red";
+  }
+
+var key;
+  window.onload = function () {
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+            key = web3.eth.accounts[0];
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
+            key = web3.eth.accounts[0];
+        }
+}
+var abi2 = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "problem",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "status",
+				"type": "uint256"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatePatientAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetAppointments",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "problem",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			}
+		],
+		"name": "RegisterPatientAppintment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+];
+    var contractaddress2 = '{{ contract_address[2] }}';//'0x5c43f8de33929988c5c70a86674c0af63c61e84b';
+    var myAbi2 = web3.eth.contract(abi2);
+    var myfunction2 = myAbi2.at(contractaddress2);
+
+var abi = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "birthday",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "maritalStatus",
+				"type": "bool"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "birthday",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "maritalStatus",
+				"type": "bool"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterPatient",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetPatients",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress = '{{ contract_address[0] }}';//'0x28f918ab89bdbf270ca65b5b36450e52cf7e7f1c';
+    var myAbi = web3.eth.contract(abi);
+    var myfunction = myAbi.at(contractaddress);
+    
+var abi1 =[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveDocotorDetails",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "email",
+				"type": "string"
+			},
+			{
+				"name": "gender",
+				"type": "string"
+			},
+			{
+				"name": "contact",
+				"type": "uint256"
+			},
+			{
+				"name": "department",
+				"type": "string"
+			},
+			{
+				"name": "Address",
+				"type": "string"
+			}
+		],
+		"name": "RegisterDoctor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetDoctors",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress1 = '{{ contract_address[1] }}';//'0x5f1e5df4adc8f279ba313c941252b8ebc9ebb537';
+    var myAbi1 = web3.eth.contract(abi1);
+    var myfunction1 = myAbi1.at(contractaddress1);
+
+var abi3 = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "ide",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetPatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "EnterPatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress3 = '{{ contract_address[3] }}';//'0x4c04d539259b59f95ac3bcd9ed7d53cf03d842a8';
+    var myAbi3 = web3.eth.contract(abi3);
+    var myfunction3 = myAbi3.at(contractaddress3);
+
+var abi5 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "appid",
+				"type": "uint256"
+			}
+		],
+		"name": "RegisterPatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppointments",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "Pid",
+				"type": "uint256"
+			},
+			{
+				"name": "appId",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "status",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress5 = '{{ contract_address[5] }}';//'0xea8694609324196dc7057f4f54e804581a85704c';
+    var myAbi5 = web3.eth.contract(abi5);
+    var myfunction5 = myAbi5.at(contractaddress5);
+
+var abi6 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "EnterLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "ide",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress6 = '{{ contract_address[6] }}';//'0x2871c020db65f400cba6275af034af34ed55b9ae';
+    var myAbi6 = web3.eth.contract(abi6);
+    var myfunction6 = myAbi6.at(contractaddress6);
+
+
+var patient_id;
+var appointment_key;
+var date;
+myfunction2.RetrivePatientAppointment.call( {{ appId }}, (error, result) => {
+  patient_id = result[0];
+  appointment_key = result[7];
+  date = result[6];
+   myfunction.RetrivePatientDetails.call(result[0], (error, results) => {
+     document.getElementById("pname").innerHTML = "<b class='text-info'> Name: </b>&nbsp &nbsp"+results[0];
+     document.getElementById("pemail").innerHTML = "<b class='text-info'> EMail: </b>&nbsp &nbsp"+results[1];
+     document.getElementById("sex").innerHTML = "<b class='text-info'> Sex: </b>&nbsp &nbsp"+results[2];
+     document.getElementById("pbd").innerHTML = "<b class='text-info'> Date of Birth: </b>&nbsp &nbsp"+results[3];
+   //  document.getElementById("pcontact").innerHTML = "<b class='text-info'> Contact: </b>&nbsp &nbsp"+results[4];
+     var add = results[6].split("-");
+   //  document.getElementById("padd").innerHTML = "<b class='text-info'> Address: </b>"+add[0]+"<br>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp"+add[1]+"<br>&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp"+add[2];
+   });
+});
+
+var Treatment=" ";
+function add_treatment(){
+ Treatment = document.getElementById("treatment").value;
+ Treatment = Treatment.replace(/\n\r?/g, '<br />');
+  document.getElementById("dis_treatment").innerHTML = Treatment;
+  alert("Treatment Updated");
+}
+
+var Diagnosis = []
+function add_diagnosis(){
+  Diagnosis.push(document.getElementById("disease").value.replace(/\n\r?/g, '<br />'));
+  Diagnosis.push(document.getElementById("comp").value.replace(/\n\r?/g, '<br />'));
+  Diagnosis.push(document.getElementById("pre_eval").value.replace(/\n\r?/g, '<br />'));
+  Diagnosis.push(document.getElementById("diag").value.replace(/\n\r?/g, '<br />'));
+  document.getElementById("dis_disease").innerHTML = Diagnosis[0];
+  document.getElementById("dis_prob").innerHTML = Diagnosis[1];
+  document.getElementById("dis_pre_eval").innerHTML = Diagnosis[2];
+  document.getElementById("dis_diag").innerHTML = Diagnosis[3];
+  alert("Data Updated");
+}
+
+
+
+myfunction3.GetPatientAppData.call(function(error, result){
+    for(var i=0;i<result;i++){
+      myfunction3.RetrivePatientAppData.call(i+1, (error,results) => {
+          patient_id = Number.parseInt(patient_id,10);
+          if(results[0] == patient_id){
+            var data = results[1].split("---");
+            // doc_id, tratment,  Diesease + Complaints + pre_eval + diag + date
+            myfunction1.RetriveDocotorDetails.call(data[0], function(error,resultss){
+              if(Number.parseInt(data[0],10) == Number.parseInt({{ docId }},10)){
+                  var table = document.getElementById('myTable');
+									var row = table.insertRow(1);
+									var cell1 = row.insertCell(0);
+									var cell2 = row.insertCell(1);
+									var cell3 = row.insertCell(2);
+									var cell4 = row.insertCell(3);
+									//var cell5 = row.insertCell(4);
+									cell1.innerHTML = resultss[0];
+									cell2.innerHTML = resultss[4];
+									cell3.innerHTML = data[6];
+									//cell4.innerHTML = results[3];
+									cell4.innerHTML = '<a class="vap" style="vertical-align:middle" href="/appointments_view_by_doctor/' + results[2] + '"<span>view</span></a>';
+              }
+            });
+            
+          }
+      });
+    }
+});
+
+function Insert_data(){
+//data = doctor_id + treatment + Diesease + Complaints + pre_eval + diag +date//+ labrec
+kc={{ docId }};
+var data=""+kc+"---"+Treatment+"---"+Diagnosis[0]+"---"+Diagnosis[1]+"---"+Diagnosis[2]+"---"+Diagnosis[3]+"---"+date;
+myfunction3.EnterPatientAppData.sendTransaction(
+  Number.parseInt(patient_id,10), data, function(error, result) {
+    if(!error){
+      alert("Data Updation Success");
+    }
+    else{
+      alert("Data Updation Unsuccessful:\n"+error);
+    }
+});
+myfunction2.UpdatePatientAppointment.sendTransaction(appointment_key, function(error,result){
+        if(!error){
+          alert(result);
+        }
+        else{
+          alert(error);
+        }
+      });
+}
+
+function add_report(){
+	var table = document.getElementById('tbl_id');
+	var row_len = table.rows.length;
+	//var column = table.rows[0].cells.length;
+	var data="";
+	for (var i = 1; i < (row_len-1)*(2); i=i+2){
+			 var j= "lddep"+i;
+			 var k= "ldata"+(i+1);
+			 j = document.getElementById(j).value;
+			 k = document.getElementById(k).value;
+			 data += j+"/"+k +"---";
+		}
+		var d=new Date();
+		var p11 = ""+d.getDate()+"-"+(d.getMonth()+1)+"-"+d.getFullYear();
+		var no = row_len -1;
+		myfunction5.RegisterPatientLabAppointment.sendTransaction(
+			patient_id, data, p11, {{ docId }}, no,{{ appId }}, (error,result)=>{
+				if(!error){
+					alert("Lab tests booked");
+				}else{alert(error);}
+		});
+		
+		
+}
+</script>
+
+<h2 class="text-primary" style="text-align:center;">APPOINTMENT DETAILS</h2>
+
+
+<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:200px">
+  <h5 class="w3-bar-item">DETAILS</h5>
+  <!--<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')">HOSPITAL</button>-->
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Left')">PATIENT</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bottom')">PREV APPOINTMENTS</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom')">TREATMENT</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fad')">LAB REPORTS</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fads')">LAB TESTS</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Right')">DIAGNOSIS</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fa')">FINAL REPORT</button>
+</div>
+
+<div style="margin-left:200px">
+
+ <!-- <div id="Fade" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>HOSPITAL</h2>
+    <p>ABC hospital</p>
+  </div>-->
+
+  <div id="Left" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>PATIENT</h2>
+    <p id="patient_details">
+      <div class="containers">
+        <label for="uname" id="pname"><b>Name: </b> </label>
+        <br><br>
+        <label for="email" id="pemail"><b>Email</b> </label>
+        <br><br>
+        <label for="sex" id="sex"><b>Sex</b></label>
+        <br><br>
+        <label for="bdate" id="pbd"><b>Birth Date</b></label>
+        <hr noshade>
+        <!--<label for="contact" id="pcontact"><b>Contact</b></label>
+        <br><br>
+        <label for="address" id="padd"><b>Address</b></label>-->
+        <hr noshade>
+      </div>
+    </p>
+  </div>
+  
+   <div id="Fads" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>LAB TESTS</h2>
+    
+    <script>
+var rowId = 0;
+var colId=0;
+function addMoreRows() {
+   var table = document.getElementById("tbl_id");
+
+    var row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+	
+    cell2.innerHTML = "<select name='lddep' id='lddep"+getColId()+"' style='margin-left:82px;'><option value='none'</option><option value='hematology'>Hematology</option><option value='radiology'>Radiology</option></select> ";
+    cell3.innerHTML = "<input style='margin-left: 10px;' id='ldata"+getColId()+"' type='text'>";
+    cell1.innerHTML = '<input type="checkbox" id="delete' + getRowId() + '">';
+
+}
+
+function deleteMoreRows(tableID) {
+
+    var table = document.getElementById(tableID);
+    var rowCount = table.rows.length;
+    var selectedRows = getCheckedBoxes();
+
+    selectedRows.forEach(function(currentValue) {
+      deleteRowByCheckboxId(currentValue.id);
+    });
+}
+
+function getRowId() {
+  rowId += 1;
+  return rowId;
+}
+function getColId() {
+	colId+=1;
+	return colId;
+}
+
+function getRowIdsFromElements($array) {
+  var arrIds = [];
+
+  $array.forEach(function(currentValue, index, array){
+    arrIds.push(getRowIdFromElement(currentValue));
+  });
+
+  return arrIds;
+}
+
+function getRowIdFromElement($el) {
+    return $el.id.split('delete')[1];
+}
+
+
+function getCheckedBoxes() {
+  var inputs = document.getElementsByTagName("input");
+  var checkboxesChecked = [];
+
+
+  for (var i=0; i < inputs.length; i++) {
+   
+     if (inputs[i].checked) {
+        checkboxesChecked.push(inputs[i]);
+     }
+  }
+
+  return checkboxesChecked.length > 0 ? checkboxesChecked : null;
+}
+
+
+function deleteRowByCheckboxId(CheckboxId) {
+    var checkbox = document.getElementById(CheckboxId);
+    var row = checkbox.parentNode.parentNode;          
+    var table = row.parentNode;
+
+    while ( table && table.tagName != 'TABLE' )
+        table = table.parentNode;
+    if (!table) return;
+    table.deleteRow(row.rowIndex);
+}
+</script>
+
+<div>
+<form>
+
+   <input type="button" id="mysubmit" value="Add Row" onClick="addMoreRows()">
+   <input type="button" id="delete" value="Delete" onClick="deleteMoreRows('tbl_id')">
+
+<table id="tbl_id" style="text-align:center" align="center" valign="top">
+   <thead>
+      <tr >
+         <th style="width:200px;"><span style="margin-left:80px;">Delete</span></th>
+         <th style="width:200px;"><span style="margin-left:80px;">Department</span></th>
+         <th style="width:200px;"><span style="margin-left:80px;">Description</span></th>
+      </tr>
+   </thead>
+</table><br><br>
+<button id="asa" onclick="add_report();" type="submit" >submit</button>
+</form>
+<br>
+<br>
+
+</div>    
+    
+  </div>
+
+  <div id="Bottom" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>Previous Appointments</h2>
+
+    <div style="height:400px;">
+<style>
+#myInput1 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.head12, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 320px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<style>
+.vap {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap:hover span {
+  padding-right: 25px;
+}
+
+.vap:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<input type="text" id="myInput1" onkeyup="myFunction121()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable">
+  <tr class="head12">
+    <th style="width:20%;">Doctor</th>
+    <th style="width:20%;">Department</th>
+    <th style="width:20%;">DateOfVisit</th>
+    <th style="width:10%;">Full Details</th>
+  </tr>
+ <!-- <tr>
+    <td>ialites</td>
+    <td>PAT</td>
+    <td>DEPT</td>
+    <td>Date</td>
+    <td>contact</td>
+    <td><a href="/appointments_view_by_doctor.html"><button class="vap"  style="vertical-align:middle" >view</button></a></td>
+  </tr>-->
+</table>
+</div>
+<script>
+function myFunction121() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+
+  </div>
+
+  <div id="Zoom" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>TREATMENT</h2>
+<div style="width:600px;height:350px;">
+<textarea class="rounded border border-primary" id="treatment" style="width:395px;height:350px;" placeholder="type here..."></textarea>
+<style>
+#asa {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#asa {border-radius: 2px;}
+</style>
+<br>
+<button id="asa" onclick="add_treatment();" type="submit" >submit</button>
+</div>
+  </div>
+
+   <div id="Fad" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>LAB REPORTS</h2>
+    <div style="height:400px;">
+<style>
+#myInput11 {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 10px 15px 10px 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable1 {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable1 th, #myTable1 td {
+  text-align: left;
+  padding: 10px;
+}
+
+#myTable1 tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable1 tr.head12, #myTable1 tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<style>
+.table-wrapper-scroll-y {
+  display: block;
+  max-height: 320px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+</style>
+<style>
+.vap1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.vap1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.vap1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.vap1:hover span {
+  padding-right: 25px;
+}
+
+.vap1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<script>
+		var abi6 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "EnterLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "ide",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetriveLabAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress6 = '{{ contract_address[6] }}';//'0x2871c020db65f400cba6275af034af34ed55b9ae';
+    var myAbi6 = web3.eth.contract(abi6);
+    var myfunction6 = myAbi6.at(contractaddress6);
+
+    var abi5 =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "appid",
+				"type": "uint256"
+			}
+		],
+		"name": "RegisterPatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "UpdatePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetLabAppointments",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "Pid",
+				"type": "uint256"
+			},
+			{
+				"name": "appId",
+				"type": "uint256"
+			},
+			{
+				"name": "Desc",
+				"type": "string"
+			},
+			{
+				"name": "date",
+				"type": "string"
+			},
+			{
+				"name": "Doct",
+				"type": "uint256"
+			},
+			{
+				"name": "status",
+				"type": "uint256"
+			},
+			{
+				"name": "no_of_tests",
+				"type": "uint256"
+			},
+			{
+				"name": "Id",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientLabAppointment",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress5 = '{{ contract_address[5] }}';//'0xea8694609324196dc7057f4f54e804581a85704c';
+    var myAbi5 = web3.eth.contract(abi5);
+    var myfunction5 = myAbi5.at(contractaddress5);
+		
+		var abi3 = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Mappings",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			},
+			{
+				"name": "ide",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "GetPatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "EnterPatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "key",
+				"type": "uint256"
+			}
+		],
+		"name": "RetrivePatientAppData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+    var contractaddress3 = '{{ contract_address[3] }}';//'0x4c04d539259b59f95ac3bcd9ed7d53cf03d842a8';
+    var myAbi3 = web3.eth.contract(abi3);
+    var myfunction3 = myAbi3.at(contractaddress3);
+
+myfunction6.GetLabAppData.call((err, res)=>{
+	for(var k=0;k<res;k++){
+		iddd = k;
+    myfunction6.RetriveLabAppData.call(iddd+1, (err,res1)=>{
+				temp = res1[1].split("---");
+				lab_app = temp[6];
+				
+				myfunction5.RetrivePatientLabAppointment.call(lab_app, (error, result)=>{
+					l = result[2].split("---");
+					k1 = l[0];
+					
+					if(result[7] == {{ appId }})
+					{
+									var table = document.getElementById('myTable1');
+									var row = table.insertRow(1);
+									var cell1 = row.insertCell(0);
+									var cell2 = row.insertCell(1);
+									var cell3 = row.insertCell(2);
+									//var cell4 = row.insertCell(3);
+									//var cell5 = row.insertCell(4);
+									cell1.innerHTML = k1.split("/")[1];
+									cell2.innerHTML = result[1];
+									//cell3.innerHTML = data[6];
+									//cell4.innerHTML = results[3];
+									cell3.innerHTML = '<a class="vap" style="vertical-align:middle" href="/lab_report_view/' + (iddd+1) + '"<span>view</span></a>';
+					}
+				});
+		});
+	}
+});
+
+</script>
+
+<input type="text" id="myInput11" onkeyup="myFunction12()" placeholder="Search" title="Type in a name">
+<div class="table-wrapper-scroll-y">
+<table id="myTable1">
+  <tr class="head12">
+    <th style="width:30%;">TEST</th>
+    <th style="width:20%;">DateOfTest</th>
+    <th style="width:10%;">Full Details</th>
+  </tr>
+  <!--<tr>
+    <td>Paris specialites</td>
+    <td>BLOOD</td>
+    <td>Date</td>
+    <td><a href="/blood_lab_reports_view_by_doctor.html"><button class="vap1"  style="vertical-align:middle" >view</button></a></td>
+  </tr>
+	-->
+	
+</table>
+</div>
+<script>
+function myFunction12() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput11");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</div>
+
+  </div>
+  <div id="Right" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>DIAGNOSIS</h2>
+    <style>
+      .asas {
+        /*border: 2px solid rgb(13, 40, 179);*/
+
+        width: 45%;
+        overflow: hidden;
+        word-wrap: break-word;
+        height: 150px;
+        margin: 2px 2px 2px 2px;
+      }
+  
+      .eee {
+        float: left;
+        border: 2px solid grey;
+        width: 617px;
+        overflow: hidden;
+        word-wrap: break-word;
+        height: 500px;
+      }
+     
+    </style>
+    <div>
+      <h4 style="text-align:left;">Disease</h4>
+      <textarea id="disease" class="border border-info" style="width:565px;height:40px;margin:3px 3px 3px 3px; " placeholder="type here..."></textarea>
+    </div>
+    
+      <div class="asas">
+        <h3 style="text-align:left;">Prehospital Evaluation</h3>
+        <textarea id="pre_eval" class="border border-info" style="width:565px;height:100px;margin: 3px 3px 3px 3px;" placeholder="type here..."></textarea>
+      </div>
+      <div class="asas">
+        <h3 style="text-align:left;">Diagnosis</h3>
+        <textarea id="diag" class="border border-info" style="width:565px;height:100px; margin: 3px 3px 3px 3px;" placeholder="type here..."></textarea>
+      </div>
+      <div class="asas">
+        <h3 style="text-align:left;">Problems</h3>
+        <textarea id="comp" class="border border-info" style="width:565px;height:100px; margin: 3px 3px 3px 3px;" placeholder="type here..."></textarea>
+      </div><br>
+      <div>
+      <button id="asa" class="margin-left:50px;" onclick="add_diagnosis();" type="submit" >submit</button>
+    </div>
+    </div>
+   
+<div id="Fa" class="w3-container city w3-animate-bottom" style="display:none">
+    <h2>FINAL REPORT</h2>
+<style>
+.apap{
+border:1px solid black;
+width:500px;
+overflow:hidden;
+word-wrap: break-word;
+min-height:150px;
+
+margin-top: 2px;
+}
+.eees{
+float:left;
+margin-left: 8px;
+margin-top:2px;
+border:1px solid black;
+width:617px;
+overflow:hidden;
+word-wrap: break-word;
+min-height:456px;
+margin-right: 100px;
+}
+.apap > p {
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+}
+.eees > p, .s > p {
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+}
+
+</style>
+<div style="border:1px solid black; width:86.75%;" class="s">
+  <h4 class="text-info" style="text-align:left; ">Disease: <span id="dis_disease"></span></h4>
+</div>
+<div style="float:left;">
+  <div class="apap">
+    <h3  class="text-info" style="text-align:center;">Problems</h3>
+    <p id="dis_prob"></p>
+  </div>
+  <div class="apap">
+    <h3 class="text-info" style="text-align:center;">Prehospital Evaluation</h3>
+    <p id="dis_pre_eval"></p>
+  </div>
+  <div class="apap">
+    <h3 class="text-info" style="text-align:center;">Diagnosis</h3>
+    <p id="dis_diag"></p>
+  </div>
+</div>
+<div class="eees" style="margin-left:5px;">
+  <h3 class="text-info" style="text-align:center;">Treatment</h3>
+  <p id="dis_treatment"></p>
+</div>
+<form action="/doctor" methods="POST">
+<button id="asa" style="margin-left:15px; margin-top: 10px;" onclick="Insert_data();" type="submit" >submit</button>
+</form>
+</div>
+
+</div>
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/styles/bootstrap4/popper.js"></script>
+<script src="../static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../static/plugins/easing/easing.js"></script>
+<script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/js/custom.js"></script>
+</body>
+</html>
